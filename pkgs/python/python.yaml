@@ -31,7 +31,7 @@ build_stages:
     name: configure
     mode: update
     append: {LDFLAGS: "-Wl,-rpath,${ARTIFACT}/lib"}
-    extra: ['--enable-shared']
+    extra: ['--enable-shared', '--enable-unicode=ucs4']
 
   - when: pyver == '3.4'
     name: configure
