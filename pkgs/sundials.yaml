@@ -1,0 +1,5 @@
+extends: [autotools_package]
+
+sources:
+- key: tar.gz:ei4mlrr4p3fmzslc6ecifv3iow2fz3p6
+  url: https://computation.llnl.gov/casc/sundials/download/code/sundials-2.5.0.tar.gz
