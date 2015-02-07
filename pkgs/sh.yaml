@@ -1,0 +1,5 @@
+extends: [distutils_package]
+
+sources:
+  - url: https://pypi.python.org/packages/source/s/sh/sh-1.11.tar.gz#md5=7af8df6c92d29ff927b6db0146bddec3
+    key: tar.gz:f34xasf27eiwt62zq7nd3rgvfbkaolfm

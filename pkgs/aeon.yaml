@@ -1,0 +1,5 @@
+extends: [distutils_package]
+
+sources:
+  - url: https://pypi.python.org/packages/source/A/Aeon/Aeon-1.0.4.tar.gz
+    key: tar.gz:f34xasf27eiwt62zq7nd3rgvfbkaolfm
