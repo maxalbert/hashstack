@@ -2,7 +2,8 @@ extends: [autotools_package]
 
 sources:
 - key: tar.gz:ei4mlrr4p3fmzslc6ecifv3iow2fz3p6
-  url: https://computation.llnl.gov/casc/sundials/download/code/sundials-2.5.0.tar.gz
+  #url: https://computation.llnl.gov/casc/sundials/download/code/sundials-2.5.0.tar.gz
+  url: http://www.southampton.ac.uk/~fangohr/.ntaoeurc223243ntoheunth23423nthouee/sundials-2.5.0.tar.gz
 
 build_stages:
   - name: Set correct gfortran compiler
