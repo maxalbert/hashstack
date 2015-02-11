@@ -16,4 +16,6 @@ build_stages:
     mode: override
     extra: ['--enable-shared',
             '--with-cflags=-fPIC',
-            '--with-ldflags=-L${OPENBLAS_DIR}/lib']
+            '--with-ldflags=-L${OPENBLAS_DIR}/lib',
+            '--with-blas=${OPENBLAS_DIR}/lib/libblas.so',
+            '--with-lapack=${OPENBLAS_DIR}/lib/liblapack.so']
