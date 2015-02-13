@@ -1,7 +1,7 @@
 extends: [cmake_package]
 
 dependencies:
-  build: [boost, dolfin, gmp, mpfr, mpi, swig, vtk, {{build_with}}]
+  build: [boost, dolfin, gmp, mpfr, mpi, python, swig, vtk, {{build_with}}]
 
 sources:
 - key: tar.gz:6nto4vmuuwnifcj6li7p7iv4mxzzdso4
@@ -12,6 +12,12 @@ defaults:
   relocatable: false
 
 build_stages:
+- name: Define environment variable pointing to the hashdist profile to be used (defaults to ~/.hashdist/bld/profile/default/)
+  before: configure
+  handler: bash
+  bash: |
+    export HASHDIST_PROFILE_DIR=${HASHDIST_PROFILE_DIR:-~/.hashdist/bld/profile/default/}
 - name: configure
   extra: ['-D BUILD_SHARED_LIBS:BOOL=ON',
-          '-D BOOST_ROOT:PATH="${BOOST_DIR}"']
+          '-D BOOST_ROOT:PATH="${BOOST_DIR}"',
+          '-D PYTHON_EXECUTABLE:FILEPATH=${HASHDIST_PROFILE_DIR}/bin/python']
