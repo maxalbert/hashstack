@@ -1,5 +1,8 @@
 extends: [autotools_package]
 
+dependencies:
+  build: [openblas]
+
 sources:
 - key: tar.gz:te2xmcjr7jstt3oqoqnmxt2jqz3qijx5
   #url: https://computation.llnl.gov/casc/sundials/download/code/sundials-2.5.0.tar.gz
